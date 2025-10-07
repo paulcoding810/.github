@@ -1,0 +1,30 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Default Renovate presets",
+  "extends": [
+    "config:base",
+    ":disableDependencyDashboard",
+    ":prHourlyLimitNone",
+    "helpers:pinGitHubActionDigests"
+  ],
+  "prConcurrentLimit": 12,
+  "addLabels": ["dependencies"],
+  "internalChecksFilter": "strict",
+  "rebaseWhen": "conflicted",
+  "packageRules": [
+    {
+      "description": "Add the github-actions label to Github Actions PRs",
+      "matchManagers": ["github-actions"],
+      "addLabels": ["github-actions"]
+    },
+    {
+      "description": "Group minor GitHub Action updates",
+      "matchManagers": ["github-actions"],
+      "groupName": "CI dependencies",
+      "groupSlug": "ci-deps",
+      "matchUpdateTypes": ["minor", "patch"]
+    }
+  ],
+  "automerge": false,
+  "platformAutomerge": false
+}
