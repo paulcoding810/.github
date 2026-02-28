@@ -7,11 +7,16 @@
     ":prHourlyLimitNone",
     "helpers:pinGitHubActionDigests"
   ],
-  "prConcurrentLimit": 12,
+  "prConcurrentLimit": 2,
   "addLabels": ["dependencies"],
   "internalChecksFilter": "strict",
   "rebaseWhen": "conflicted",
   "packageRules": [
+    {
+      "description": "Limit major version updates",
+      "matchUpdateTypes": ["major", "patch"],
+      "enabled": false
+    },
     {
       "description": "Add the github-actions label to Github Actions PRs",
       "matchManagers": ["github-actions"],
@@ -22,7 +27,7 @@
       "matchManagers": ["github-actions"],
       "groupName": "CI dependencies",
       "groupSlug": "ci-deps",
-      "matchUpdateTypes": ["minor", "patch"]
+      "matchUpdateTypes": ["major"]
     }
   ],
   "automerge": false,
