@@ -4,8 +4,7 @@
   "extends": [
     "config:base",
     ":disableDependencyDashboard",
-    ":prHourlyLimitNone",
-    "helpers:pinGitHubActionDigests"
+    ":prHourlyLimitNone"
   ],
   "prConcurrentLimit": 2,
   "addLabels": ["dependencies"],
