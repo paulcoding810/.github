@@ -9,53 +9,6 @@
       "addLabels": ["gradle"]
     },
     {
-      "description": "Add the gradle-wrapper label to Gradle wrapper PRs",
-      "matchManagers": ["gradle-wrapper"],
-      "addLabels": ["gradle-wrapper"]
-    },
-    {
-      "description": "Group Detekt dependencies",
-      "groupName": "detekt",
-      "groupSlug": "detekt",
-      "matchPackageNames": ["io.gitlab.arturbosch.detekt:**"]
-    },
-    {
-      "description": "Group Exposed dependencies",
-      "groupName": "Exposed",
-      "groupSlug": "exposed",
-      "matchPackageNames": [
-        "org.jetbrains.exposed:**",
-        "org.postgresql:postgresql"
-      ]
-    },
-    {
-      "description": "Group Firebase dependencies",
-      "groupName": "Firebase",
-      "groupSlug": "firebase",
-      "matchPackageNames": ["com.google.firebase**"]
-    },
-    {
-      "description": "Group Koin dependencies",
-      "groupName": "Koin",
-      "groupSlug": "koin",
-      "matchPackageNames": ["io.insert-koin:**"]
-    },
-    {
-      "description": "Group Kotest dependencies",
-      "groupName": "Kotest",
-      "groupSlug": "kotest",
-      "matchPackageNames": ["io.kotest:**"]
-    },
-    {
-      "description": "Group Kotlin and KSP dependencies",
-      "groupName": "Kotlin",
-      "groupSlug": "kotlin",
-      "matchPackageNames": [
-        "org.jetbrains.kotlin**",
-        "com.google.devtools.ksp**"
-      ]
-    },
-    {
       "description": "Group kotlinx.coroutines dependencies",
       "groupName": "kotlinx.coroutines",
       "groupSlug": "kotlinx-coroutines",
